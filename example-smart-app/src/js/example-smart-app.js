@@ -61,6 +61,7 @@
             p.height = getQuantityValueAndUnit(height[0]);
             p.weight = getQuantityValueAndUnit(weight[0]);
             p.allergy = allergy;
+            p.allreact = allreact;
   
            /* if (typeof systolicbp != 'undefined')  {
               p.systolicbp = systolicbp;
