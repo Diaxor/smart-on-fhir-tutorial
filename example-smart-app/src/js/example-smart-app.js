@@ -167,7 +167,7 @@
       $('#birthdate').html(p.birthdate);
       $('#height').html(p.height);
       $('#weight').html(p.weight);
-      /*$('#allergy').html(p.allergy);
+      $('#allergy').html(p.allergy);
       $('#allreact').html(p.allreact);
       $('#medname').html(p.medname);
       $('#meddose').html(p.meddose);
@@ -198,7 +198,7 @@
       $('#ProvName').html(p.ProvName);
       $('#ProvPhonenum').html(p.ProvPhonenum);
       $('#AddInfoDesc').html(p.AddInfoDesc);
-      $('#RevoSysDesc').html(p.RevoSysDesc); */
+      $('#RevoSysDesc').html(p.RevoSysDesc); 
 
     //   $('#').html(p.);
     //   $('#systolicbp').html(p.systolicbp);
