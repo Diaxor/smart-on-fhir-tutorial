@@ -57,7 +57,7 @@
             p.height = getQuantityValueAndUnit(height[0]);
             p.weight = getQuantityValueAndUnit(weight[0]);
   
-            if (typeof systolicbp != 'undefined')  {
+           /* if (typeof systolicbp != 'undefined')  {
               p.systolicbp = systolicbp;
             }
   
@@ -65,9 +65,9 @@
               p.diastolicbp = diastolicbp;
             }
   
-            p.hdl = getQuantityValueAndUnit(hdl[0]);
-            p.ldl = getQuantityValueAndUnit(ldl[0]);
-  
+            //p.hdl = getQuantityValueAndUnit(hdl[0]);
+           // p.ldl = getQuantityValueAndUnit(ldl[0]);
+            */
             ret.resolve(p);
           });
         } else {
