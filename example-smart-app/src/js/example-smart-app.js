@@ -18,7 +18,8 @@
                           $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
                                 'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
                                 'http://loinc.org|2089-1', 'http://loinc.org|55284-4',
-                                'https://loinc.org|3141-9', 'https://loinc.org|45675-6|'
+                                'https://loinc.org|3141-9', 'https://loinc.org|45675-6',
+                                'https://loinc.org|48765-2'
                                 ]
                         } 
                         /**
@@ -49,6 +50,7 @@
             var height = byCodes('8302-2');
             var weight = byCodes('3141-9');
             var allergy = byCodes('45675-6');
+            var allreact = byCodes('48765-2');
 
   
             var p = defaultPatient();
