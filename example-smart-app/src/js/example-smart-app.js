@@ -18,7 +18,8 @@
                           $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
                                 'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
                                 'http://loinc.org|2089-1', 'http://loinc.org|55284-4',
-                                'https://loinc.org|3141-9']
+                                'https://loinc.org|3141-9', 'https://loinc.org|45675-6|'
+                                ]
                         } 
                         /**
                             Code 8302-2: Height
@@ -47,6 +48,7 @@
   
             var height = byCodes('8302-2');
             var weight = byCodes('3141-9');
+            var allergy = byCodes('45675-6');
 
   
             var p = defaultPatient();
@@ -56,6 +58,7 @@
             p.lname = lname;
             p.height = getQuantityValueAndUnit(height[0]);
             p.weight = getQuantityValueAndUnit(weight[0]);
+            p.allergy = allergy;
   
            /* if (typeof systolicbp != 'undefined')  {
               p.systolicbp = systolicbp;
@@ -88,7 +91,7 @@
         birthdate: {value: ''},
         height: {value: ''},
         weight: {value: ''},
-        /*allergy: {value: ''},
+        allergy: {value: ''},
         allreact: {value: ''},
         medname: {value: ''},
         meddose: {value: ''},
@@ -119,7 +122,7 @@
         ProvName: {value: ''},
         ProvPhonenum: {value: ''},
         AddInfoDesc: {value: ''},
-        RevoSysDesc: {value: ''} */
+        RevoSysDesc: {value: ''} 
 
       };
     }
