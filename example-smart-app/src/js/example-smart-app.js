@@ -51,6 +51,7 @@
             var weight = byCodes('3141-9');
             var allergy = byCodes('45675-6');
             var allreact = byCodes('48765-2');
+            var medname = 'something';
 
   
             var p = defaultPatient();
@@ -62,6 +63,8 @@
             p.weight = getQuantityValueAndUnit(weight[0]);
             p.allergy = allergy;
             p.allreact = allreact;
+            p.medname = medname;
+  
   
            /* if (typeof systolicbp != 'undefined')  {
               p.systolicbp = systolicbp;
