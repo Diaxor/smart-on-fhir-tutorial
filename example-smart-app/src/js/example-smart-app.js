@@ -69,7 +69,7 @@
             var allergy = byCode2('45675-6');
             var allreact = byCode2('48765-2');
             var medname = 'somethingelse';
-            console.log(allergy)
+            console.log(weight);
 
   
             var p = defaultPatient();
