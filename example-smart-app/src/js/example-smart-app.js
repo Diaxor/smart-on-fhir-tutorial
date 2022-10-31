@@ -37,6 +37,7 @@
   
           $.when(pt, obv).done(function(patient, obv) {
             var byCodes = smart.byCodes(obv, 'code');
+            var byCode2 = smart.byCodes(patient, 'code');
             var gender = patient.gender;
   
             var fname = '';
@@ -49,9 +50,8 @@
   
             var height = byCodes('8302-2');
             var weight = byCodes('3141-9');
-            var allergy = byCodes('45675-6');
-            var allreact = byCodes('48765-2');
-            var medname = 'something';
+            var allergy = byCode2('45675-6');
+            var allreact = byCode2('48765-2');
 
   
             var p = defaultPatient();
