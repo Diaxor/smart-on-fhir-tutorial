@@ -32,6 +32,22 @@
                         */
                       }
                     });
+            var pat = smart.patient.api.fetchAll({
+                     type: 'AllergyIntolerance',
+                     query: {
+                        code: {
+                            $or: [
+                                'https://loinc.org|3141-9', 'https://loinc.org|45675-6',
+                                'https://loinc.org|48765-2'
+                            ]
+                        }
+                        /**
+                         * Code 3141-9: Weight
+                         * Code 45675-6: Allergies
+                         * Code 48765-2: Allergic Reaction
+                         */
+                     }
+                });
   
           $.when(pt, obv).fail(onError);
   
@@ -52,6 +68,7 @@
             var weight = byCodes('3141-9');
             var allergy = byCode2('45675-6');
             var allreact = byCode2('48765-2');
+            var medname = 'somethingelse';
 
   
             var p = defaultPatient();
