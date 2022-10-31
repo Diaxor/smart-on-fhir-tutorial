@@ -53,7 +53,7 @@
   
           $.when(pt, obv).done(function(patient, obv) {
             var byCodes = smart.byCodes(obv, 'code');
-            var byCode2 = smart.byCodes(pt, 'code');
+            var byCode2 = smart.byCodes(pat, 'code');
             var gender = patient.gender;
   
             var fname = '';
