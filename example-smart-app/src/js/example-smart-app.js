@@ -32,7 +32,7 @@
                         */
                       }
                     });
-            var pat = smart.patient.api.fetchAll({
+          var Aller = smart.patient.api.fetchAll({
                      type: 'AllergyIntolerance',
                      query: {
                         code: {
@@ -47,13 +47,13 @@
                          * Code 48765-2: Allergic Reaction
                          */
                      }
-                });
+          });
   
           $.when(pt, obv).fail(onError);
   
           $.when(pt, obv).done(function(patient, obv) {
             var byCodes = smart.byCodes(obv, 'code');
-            var byCode2 = smart.byCodes(pat, 'code');
+            var byCode2 = smart.byCodes(Aller, 'code');
             var gender = patient.gender;
   
             var fname = '';
@@ -65,11 +65,10 @@
             }
   
             var height = byCodes('8302-2');
-            var weight = byCodes('3141-9');
+            var weight = patient.weight; //byCodes('3141-9');
             var allergy = byCode2('45675-6');
             var allreact = byCode2('48765-2');
             var medname = 'somethingelse';
-            console.log(weight);
 
   
             var p = defaultPatient();
@@ -82,7 +81,6 @@
             p.allergy = allergy;
             p.allreact = allreact;
             p.medname = medname;
-  
   
            /* if (typeof systolicbp != 'undefined')  {
               p.systolicbp = systolicbp;
@@ -114,39 +112,39 @@
         gender: {value: ''},
         birthdate: {value: ''},
         height: {value: ''},
-        weight: {value: 'N/A'},
-        allergy: {value: 'N/A'},
-        allreact: {value: 'N/A'},
-        medname: {value: 'N/A'},
-        meddose: {value: 'N/A'},
-        medfreq: {value: 'N/A'},
-        chol: {value: 'N/A'},
-        ColoSig: {value: 'N/A'},  
-        mammo: {value: 'N/A'},
-        papsme: {value: 'N/A'},
-        bonedens: {value: 'N/A'},
-        vacc: {value: 'N/A'},
-        vaccdate: {value: 'N/A'},
-        DesMDH: {value: 'N/A'},
-        DesSurg: {value: 'N/A'},
-        DateLMC: {value: 'N/A'},
-        TotNumoPreg: {value: 'N/A'},
-        NumoLB: {value: 'N/A'},
-        PregComp: {value: 'N/A'},
-        FamMH: {value: 'N/A'},
-        FamMHRel: {value: 'N/A'},
-        SocHis: {value: 'N/A'},
-        TobUs: {value: 'N/A'},
-        AlcUs: {value: 'N/A'},
-        SexAc: {value: 'N/A'},
-        Exer: {value: 'N/A'},
-        Sleep: {value: 'N/A'},
-        Diet: {value: 'N/A'},
-        Safet: {value: 'N/A'},
-        ProvName: {value: 'N/A'},
-        ProvPhonenum: {value: 'N/A'},
-        AddInfoDesc: {value: 'N/A'},
-        RevoSysDesc: {value: 'N/A'} 
+        weight: {value: ''},
+        allergy: {value: ''},
+        allreact: {value: ''},
+        medname: {value: ''},
+        meddose: {value: ''},
+        medfreq: {value: ''},
+        chol: {value: ''},
+        ColoSig: {value: ''},  
+        mammo: {value: ''},
+        papsme: {value: ''},
+        bonedens: {value: ''},
+        vacc: {value: ''},
+        vaccdate: {value: ''},
+        DesMDH: {value: ''},
+        DesSurg: {value: ''},
+        DateLMC: {value: ''},
+        TotNumoPreg: {value: ''},
+        NumoLB: {value: ''},
+        PregComp: {value: ''},
+        FamMH: {value: ''},
+        FamMHRel: {value: ''},
+        SocHis: {value: ''},
+        TobUs: {value: ''},
+        AlcUs: {value: ''},
+        SexAc: {value: ''},
+        Exer: {value: ''},
+        Sleep: {value: ''},
+        Diet: {value: ''},
+        Safet: {value: ''},
+        ProvName: {value: ''},
+        ProvPhonenum: {value: ''},
+        AddInfoDesc: {value: ''},
+        RevoSysDesc: {value: ''} 
 
       };
     }
