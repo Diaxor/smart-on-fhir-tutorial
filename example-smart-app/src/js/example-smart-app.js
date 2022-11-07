@@ -19,7 +19,7 @@
                                 'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
                                 'http://loinc.org|2089-1', 'http://loinc.org|55284-4',
                                 'https://loinc.org|3141-9', 'https://loinc.org|45675-6',
-                                'https://loinc.org|48765-2'
+                                'https://loinc.org|48765-2', 'https://loinc.org|52418-1'
                                 ]
                         } 
                         /**
@@ -67,7 +67,7 @@
             var weight = byCodes('3141-9');
             var allergy = byCodes('45675-6');
             var allreact = byCodes('48765-2');
-            var medname = 'somethingelse';
+            var medname = byCodes('52418-1');
 
   
             var p = defaultPatient();
